@@ -1,0 +1,43 @@
+CREATE TABLE "mytable" (
+  "// Step 2: Create a database" text
+);
+
+INSERT INTO "mytable" ("// Step 2: Create a database")
+VALUES
+('use library'),
+('// switched to db library'),
+('// Step 3: Insert data'),
+('db.authors.insertMany(['),
+('{ "AuthorID": 1'),
+('{ "AuthorID": 2'),
+('{ "AuthorID": 3'),
+('])'),
+('// Output: { "acknowledged": true'),
+('db.books.insertMany(['),
+('{ "BookID": 1'),
+('{ "BookID": 2'),
+('{ "BookID": 3'),
+('])'),
+('// Output: { "acknowledged": true'),
+('db.borrowers.insertMany(['),
+('{ "BorrowerID": 1'),
+('{ "BorrowerID": 2'),
+('])'),
+('// Output: { "acknowledged": true'),
+('db.borrowedBooks.insertMany(['),
+('{ "BorrowerID": 1'),
+('{ "BorrowerID": 2'),
+('])'),
+('// Output: { "acknowledged": true'),
+('// Step 4: Update data'),
+('db.authors.updateOne({ "AuthorID": 1 }'),
+('// Output: { "acknowledged": true'),
+('// Step 5: Query data'),
+('db.authors.find().pretty()'),
+('// Output:'),
+('// { "_id": ObjectId("...")'),
+('// { "_id": ObjectId("...")'),
+('// { "_id": ObjectId("...")'),
+('// Step 6: Delete data'),
+('db.authors.deleteOne({ "AuthorID": 1 })'),
+('// Output: { "acknowledged": true');
